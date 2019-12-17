@@ -1,0 +1,36 @@
+---
+title: "2020 Parental acceptance of SDF Latvia"
+output: html_notebook
+---
+
+# Packages
+```{r}
+pacman::p_load(tidyverse)
+```
+
+# Dataset
+```{r}
+df <- read_csv("dataset-lv-sdf.csv")
+```
+
+
+# EDA
+
+```{r}
+df <- 
+  janitor::clean_names(df) %>% 
+  janitor::remove_empty(which = c("rows", "cols"))
+```
+
+```{r}
+head(df)
+```
+
+```{r}
+glimpse(df)
+```
+
+```{r}
+skimr::skim(df)
+```
+
